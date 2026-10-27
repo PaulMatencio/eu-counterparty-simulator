@@ -1,0 +1,19 @@
+{
+  "_comment": "TEST-ONLY sample policy. Country codes XA/XB/XC are ISO 3166 user-assigned codes standing in for the EU list of high-risk third countries; replace with the current official list for any realistic simulation.",
+  "caspName": "EU Counterparty Simulator CASP (TEST)",
+  "highRiskCountries": ["XA", "XB", "XC"],
+  "eddVolumeThresholdEur": 1000000,
+  "selfHostedWalletVerificationThresholdEur": 1000,
+  "riskPoints": {
+    "base": 5,
+    "pep": 35,
+    "highRiskCountry": 35,
+    "sourceOfFundsUndocumented": 25,
+    "highVolume": 10,
+    "complexOwnership": 10
+  },
+  "eddScoreThreshold": 40,
+  "rejectScoreThreshold": 80,
+  "attestationValidityDays": 7,
+  "retentionYears": 5
+}

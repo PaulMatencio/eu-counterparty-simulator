@@ -1,0 +1,19 @@
+pragma language_version >= 0.23;
+
+import CompactStandardLibrary;
+// The canonical attestation format. Relying contracts vendor this file
+// byte-for-byte (see KycAttestationV1.sha256).
+import "KycAttestationV1";
+
+// Test harness, never deployed. Compiling it gives the simulator the exact
+// hash functions a relying contract uses (pureCircuits), plus an in-circuit
+// verifier to prove interoperability in tests (checkAttestation).
+export { KycAttestation, SchnorrSignature, kycMessage, kycReference,
+         kycRevocationMessage, issuerRevocationMessage };
+
+export circuit checkAttestation(pk: JubjubPoint, att: KycAttestation, sig: SchnorrSignature): Boolean {
+    return verifySchnorr(pk, kycMessage(att), sig);
+}
+export circuit checkMessage(pk: JubjubPoint, msg: Field, sig: SchnorrSignature): Boolean {
+    return verifySchnorr(pk, msg, sig);
+}

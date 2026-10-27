@@ -1,0 +1,7 @@
+{
+  "_comment": "FICTIONAL sample entries for tests. Not real persons or entities. Replace with the EU consolidated financial sanctions list feed for realistic simulations.",
+  "entries": [
+    { "id": "SIM-0001", "name": "Testo Sanctionedperson", "type": "natural", "country": "XA" },
+    { "id": "SIM-0002", "name": "Shellco Blocked Holdings Ltd", "type": "legal", "country": "XB" }
+  ]
+}
