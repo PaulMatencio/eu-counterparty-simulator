@@ -17,8 +17,14 @@
     "check:module": "node scripts/check-module-hash.mjs",
     "build": "tsc -p tsconfig.json",
     "test": "npm run check:module && npm run build && node --test dist/test/*.test.js",
-    "start": "node dist/src/cli.js serve"
+    "start": "node dist/src/cli.js serve",
+    "web:dev": "npm --workspace apps/web run dev",
+    "web:build": "npm --workspace apps/web run build",
+    "web:test": "npm --workspace apps/web run test"
   },
+  "workspaces": [
+    "apps/web"
+  ],
   "dependencies": {
     "@midnight-ntwrk/compact-runtime": "0.16.0"
   },

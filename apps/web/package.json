@@ -1,0 +1,39 @@
+{
+  "name": "@eu-counterparty-simulator/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Front-end application for the EU Counterparty Simulator (MiCA CASP) using Clean Architecture, Next.js 15, React 19, Tailwind CSS (Midnight theme), and Vitest.",
+  "type": "module",
+  "imports": {
+    "#kyc-harness": "../../compact/managed/kyc-harness/contract/index.js"
+  },
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start --port 3000",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@midnight-ntwrk/compact-runtime": "0.16.0",
+    "@midnight-ntwrk/dapp-connector-api": "^4.0.1",
+    "lucide-react": "^0.468.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.3",
+    "vitest": "^2.1.8"
+  }
+}

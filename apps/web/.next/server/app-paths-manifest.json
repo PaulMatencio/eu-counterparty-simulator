@@ -1,0 +1,6 @@
+{
+  "/api/health/route": "app/api/health/route.js",
+  "/api/.well-known/casp-keys/route": "app/api/.well-known/casp-keys/route.js",
+  "/api/personas/route": "app/api/personas/route.js",
+  "/page": "app/page.js"
+}
